@@ -21,7 +21,13 @@ funksjonen)
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 1 her
+function oddOrEven(number) {
+  return number % 2 === 0 ? "Even" : "Odd";
+}
+// returnerer partall hvis nummeret er delelig med 2 ellers oddetall
+
+console.log(oddOrEven(3));
+console.log(oddOrEven(20));
 
 /******************************************************************************
 2.
@@ -35,7 +41,10 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 2 her
+const caps = (text) => {
+  return text.toUppercase() + "!";
+};
+console.log(text("what happened here"));
 
 /******************************************************************************
 3.
@@ -58,8 +67,20 @@ Funksjonen skal returnere:
 Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
+function message(name, time) {
+  if (time === undefined) return "Error, please enter valid input";
+  else if (time < 0 || time > 23) return "Invalid time";
+  else if (time <= 5) return `God natt ${name}`;
+  else if (time <= 11) return `God morgen ${name}`;
+  else if (time <= 17) return `God dag ${name}`;
+  else return `God kveld ${name}`;
+}
 
-// Skriv koden for oppgave 3 her
+console.log(message(""));
+console.log(message(""));
+console.log(message(""));
+console.log(message(""));
+// sjekker hvert parameter i rekkefølge og bare en vil komme tilbake true
 
 /******************************************************************************
 4.
@@ -76,7 +97,11 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 4 her
+const trimarr = (arr) => {
+  return arr.slice(1, -1);
+};
+console.log(trimarr(["Frieren", "Fern", "Stark", "Heiter", "Himmel", "Eisen"]));
+// slicer ut alt mellom første indeks til nest siste
 
 /******************************************************************************
 5.
@@ -97,8 +122,10 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 5 her
-
+function txtchange(text) {
+  return text.trim().replaceALL("vanskelig", "gøy");
+}
+console.log(txtchange(" Frieren er vanskelig å se"));
 /******************************************************************************
 6.
 
@@ -122,7 +149,7 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 6 her
+items.shift();
 
 /******************************************************************************
 7.
@@ -177,3 +204,5 @@ Returner "😎Kun primitive verdier😎".
 ******************************************************************************/
 
 // Skriv koden for oppgave 8 her
+
+/******************************************************************************/
