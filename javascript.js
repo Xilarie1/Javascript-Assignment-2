@@ -151,6 +151,16 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 items.shift();
 
+const index = items.indexOf("Viskelær");
+if (index !== -1 {
+  items[index] = "Linjal";
+}
+items.splice(0, 2, "Markeringspenn"):
+
+const result = items.join(" | ");
+
+console.log(result);
+
 /******************************************************************************
 7.
 
